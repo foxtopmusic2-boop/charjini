@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق شرجيني | شحن رصيد الهاتف فورياً في تونس بالكاميرا وبدون نت</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="تطبيق شرجيني (Charejni) - التطبيق التونسي الأول لتعبئة كروت الشحن بالكاميرا بدون إنترنت لشبكات أوريدو، اتصالات تونس، وأورنج بنقرة واحدة.">
+  <meta name="keywords" content="شرجيني, صولد تونس, شحن رصيد, ooredoo, tunisie telecom, orange tunisie, كارت صولد, ussd tunisie, apk">
+  <meta name="author" content="شرجيني تونس">
+  <meta name="theme-color" content="#02060E">
+  
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+</head>
+<body>
+
+  <!-- Background Ambience Layer -->
+  <div class="site-bg-overlay" aria-hidden="true"></div>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="brand-link">
+        <div class="brand-badge-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="5" y="2" width="14" height="20" rx="3" stroke-linecap="round"/>
+            <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">شرجيني</span>
+          <span class="brand-sub">Charejni TN</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#features" class="nav-item">المميزات</a>
+        <a href="#how-it-works" class="nav-item">طريقة الاستخدام</a>
+        <a href="#operators" class="nav-item">المشغلون</a>
+        <a href="#simulator" class="nav-item">جرب بنفسك</a>
+        <a href="#faq" class="nav-item">الأسئلة الشائعة</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Button to customize download link -->
+        <button id="btnOpenLinkModalNav" class="btn-secondary-sm" title="تخصيص مكان تحميل التطبيق">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          <span>تخصيص الرابط</span>
+        </button>
+
+        <a href="#download" class="btn-primary-sm download-cta-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>تحميل APK</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>🇹🇳 التطبيق التونسي الأول لتعبئة الرصيد الذكية</span>
+        </div>
+
+        <h1 class="hero-title">
+          صبّ الصولد في <span class="highlight-text">رمشة عين</span> بدون تعب ولا كتابة!
+        </h1>
+
+        <p class="hero-description">
+          تطبيق <strong>"شرجيني"</strong> يسهل عليك تعبئة بطاقات الشحن في تونس؛ وجّه كاميرا الهاتف نحو بطاقة الصولد، والتطبيق يقرأ الأرقام فورياً، يركّب كود المشغل الخاص بك (أوريدو، اتصالات تونس، أو أورنج)، وينقلك مباشرة إلى زر الاتصال للتعبئة بدون أي خطأ.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group">
+          <a id="btnMainDownload" href="charjini.apk" download="charjini.apk" class="btn-hero-primary download-action-target">
+            <div class="btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <div class="btn-text-block">
+              <span class="btn-title">تحميل التطبيق مجاناً (APK)</span>
+              <span class="btn-subtitle">نسخة الأندرويد الرسمية • حجم 11.3 MB</span>
+            </div>
+          </a>
+
+          <button id="btnOpenLinkModalHero" class="btn-hero-secondary" title="اضغط هنا لتحديد الرابط الذي تريده">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+            <span>مكان التحميل (خصص الرابط)</span>
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-pills">
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/></svg>
+            <span>يعمل 100% بدون نت (Offline)</span>
+          </div>
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>سريع ومباشر في 3 ثوانٍ</span>
+          </div>
+          <div class="trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>آمن وخاص بدون إعلانات</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Modern Phone Mockup -->
+      <div class="hero-phone-showcase">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          
+          <div class="phone-screen">
+            <!-- Simulated App Header -->
+            <div class="mock-header">
+              <span class="mock-pill">Charejni</span>
+              <span class="mock-title">شرجيني</span>
+              <span class="mock-status">🟢 مباشر</span>
+            </div>
+
+            <!-- Operator Select in Mockup -->
+            <div class="mock-card mock-op active">
+              <img src="assets/images/telecom.jpg" alt="Tunisie Telecom" class="mock-op-logo">
+              <div class="mock-op-info">
+                <strong>اتصالات تونس (TT)</strong>
+                <code>*123*الرمز#</code>
+              </div>
+              <span class="mock-check">✓</span>
+            </div>
+
+            <!-- Scanner Viewfinder Simulation -->
+            <div class="mock-scanner-box">
+              <div class="scan-laser"></div>
+              <div class="scan-card-preview">
+                <span class="card-brand">Carte de Recharge</span>
+                <span class="card-pin">7489 3125 9044 18</span>
+              </div>
+              <div class="scan-guide-corners"></div>
+            </div>
+
+            <!-- Auto Dialer Action -->
+            <div class="mock-action-card">
+              <div class="ussd-result-code">*123*74893125904418#</div>
+              <div class="mock-call-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>اتصال فوري بالتعبئة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag">لماذا تختار شرجيني؟</span>
+        <h2 class="section-title">مصمم خصيصاً للمواطن التونسي</h2>
+        <p class="section-subtitle">حل ذكي وبسيط يغنيك عن تدقيق الأرقام الصغيرة في كروت الشحن أو الوقوع في أخطاء إدخال الرمز.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon icon-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">مسح ضوئي ذكي بالكاميرا (OCR)</h3>
+          <p class="feature-desc">تقنية مسح متقدمة تقرأ الأرقام المطبوعة على بطاقات الشحن حتى في الإضاءة الخافتة أو الخطوط الدقيقة وبسرعة فائقة.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-emerald">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">قراءة بطاقات الـ QR كود</h3>
+          <p class="feature-desc">يدعم الجيل الجديد من بطاقات الشحن التونسية التي تحتوي على باركود QR لمسح فوري بنبضة واحدة.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 1l22 22"/>
+              <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/>
+              <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">أوفلاين 100% بدون إنترنت</h3>
+          <p class="feature-desc">لا تحتاج لأي اشتراك إنترنت أو شبكة Wi-Fi؛ كافة نماذج التعرف الضوئي مدمجة مسبقاً داخل التطبيق.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">اتصال وتعبئة مباشرة</h3>
+          <p class="feature-desc">يولد الكود الصحيح للمشغل مع الشباك <code>#</code> وينقلك لشاشة الاتصال دون الحاجة لنسخ أو لصق.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-yellow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h.01M12 12h.01M17 12h.01M7 16h.01M12 16h.01M17 16h.01"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">لوحة أرقام يدوية ذكية</h3>
+          <p class="feature-desc">إذا كانت البطاقة تالفة جزئياً، يمكنك إدخال الرمز من لوحة الأرقام الكبيرة مع خاصية التنسيق التلقائي.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon icon-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">سجل التعبئات السابقة</h3>
+          <p class="feature-desc">احتفظ بسجل زمني لعمليات الشحن التي قمت بها مع التاريخ والساعة والمشغل للرجوع إليها متى شئت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operators Section -->
+  <section id="operators" class="operators-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag">التوافق الكامل</span>
+        <h2 class="section-title">يدعم جميع شبكات الاتصالات في تونس</h2>
+        <p class="section-subtitle">يتعرف التطبيق على الصيغ والأكواد الرسمية المعتمدة لكل شبكة في تونس:</p>
+      </div>
+
+      <div class="operators-cards">
+        <!-- Ooredoo -->
+        <div class="operator-box op-ooredoo">
+          <div class="op-header">
+            <img src="assets/images/ooredoo.png" alt="Ooredoo Tunisie" class="op-logo">
+            <div>
+              <h3 class="op-name">أوريدو تونس</h3>
+              <span class="op-net">Ooredoo TN</span>
+            </div>
+          </div>
+          <div class="op-formula">
+            <span class="formula-label">كود التعبئة:</span>
+            <code class="formula-code">*101*الرمز#</code>
+          </div>
+          <div class="op-balance">
+            <span class="formula-label">كود معرفة الرصيد:</span>
+            <code>*100#</code>
+          </div>
+        </div>
+
+        <!-- Tunisie Telecom -->
+        <div class="operator-box op-telecom">
+          <div class="op-header">
+            <img src="assets/images/telecom.jpg" alt="Tunisie Telecom" class="op-logo">
+            <div>
+              <h3 class="op-name">اتصالات تونس</h3>
+              <span class="op-net">Tunisie Telecom</span>
+            </div>
+          </div>
+          <div class="op-formula">
+            <span class="formula-label">كود التعبئة:</span>
+            <code class="formula-code">*123*الرمز#</code>
+          </div>
+          <div class="op-balance">
+            <span class="formula-label">كود معرفة الرصيد:</span>
+            <code>*122#</code>
+          </div>
+        </div>
+
+        <!-- Orange -->
+        <div class="operator-box op-orange">
+          <div class="op-header">
+            <img src="assets/images/orange.jpg" alt="Orange Tunisie" class="op-logo">
+            <div>
+              <h3 class="op-name">أورنج تونس</h3>
+              <span class="op-net">Orange TN</span>
+            </div>
+          </div>
+          <div class="op-formula">
+            <span class="formula-label">كود التعبئة:</span>
+            <code class="formula-code">*100*الرمز#</code>
+          </div>
+          <div class="op-balance">
+            <span class="formula-label">كود معرفة الرصيد:</span>
+            <code>*111#</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="steps-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag">بساطة الاستخدام</span>
+        <h2 class="section-title">كيف تشحن رصيدك في 3 خطوات بسيطة؟</h2>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3 class="step-title">اختر مشغل الخط</h3>
+          <p class="step-text">افتح التطبيق واضغط على مشغل بطاقة الخط (أوريدو، اتصالات تونس، أو أورنج).</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3 class="step-title">وجّه الكاميرا أو اكتب الرمز</h3>
+          <p class="step-text">ضع بطاقة الشحن أمام الكاميرا ليتم قراءة الأرقام في جزء من الثانية تلقائياً.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3 class="step-title">اضغط اتصال والتعبئة</h3>
+          <p class="step-text">ينقلك التطبيق مباشرة للاتصال بالكود جاهزاً، ومبروك الرصيد يوصلك على هاتفك فوراً!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Simulator Section -->
+  <section id="simulator" class="simulator-section">
+    <div class="container">
+      <div class="simulator-wrapper">
+        <div class="simulator-info">
+          <span class="section-tag">تجربة حية</span>
+          <h2 class="section-title">جرّب طريقة عمل الكود الآن!</h2>
+          <p class="section-subtitle">اختر مشغلك واكتب أي رقم تجريبي لترى كيف يولد التطبيق كود الـ USSD المخصص مباشرة:</p>
+        </div>
+
+        <div class="simulator-card">
+          <div class="sim-op-selector">
+            <button class="sim-btn active" data-sim-op="ooredoo">أوريدو (*101*)</button>
+            <button class="sim-btn" data-sim-op="telecom">اتصالات تونس (*123*)</button>
+            <button class="sim-btn" data-sim-op="orange">أورنج (*100*)</button>
+          </div>
+
+          <div class="sim-input-box">
+            <label for="simPinInput">أدخل رمز البطاقة (تجريبي):</label>
+            <input type="text" id="simPinInput" placeholder="مثال: 58219403816723" maxlength="16" value="58219403816723">
+          </div>
+
+          <div class="sim-output-box">
+            <span class="sim-label">الكود الجاهز للاتصال:</span>
+            <div id="simResultUssd" class="sim-ussd-display">*101*58219403816723#</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download-section">
+    <div class="container">
+      <div class="download-banner">
+        <div class="download-content">
+          <span class="download-badge">جاهز للتحميل مجاناً</span>
+          <h2 class="download-title">حمّل تطبيق "شرجيني" الآن على هاتفك الأندرويد</h2>
+          <p class="download-desc">
+            احصل على النسخة الأصلية والموقعة رقمياً مجاناً، واستمتع بتجربة شحن رصيد فائقة السرعة والأمان بدون الحاجة للإنترنت.
+          </p>
+
+          <div class="download-actions">
+            <!-- The Main Download Button -->
+            <a id="btnBannerDownload" href="charjini.apk" download="charjini.apk" class="btn-download-main download-action-target">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>تحميل ملف الـ APK (11.3 MB)</span>
+            </a>
+
+            <!-- Customize Link Action -->
+            <button id="btnOpenLinkModalBanner" class="btn-download-config">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+              <span>تخصيص مكان التحميل ⚙️</span>
+            </button>
+          </div>
+
+          <div class="download-meta-info">
+            <span>✅ خوادم سريعة تعمل 24/7 بدون انقطاع</span>
+            <span>✅ ترخيص مجاني مدى الحياة</span>
+            <span>✅ متوافق مع كافة أجهزة أندرويد</span>
+          </div>
+        </div>
+
+        <div class="download-qr-box">
+          <div class="qr-container">
+            <!-- QR code generated automatically by script -->
+            <img id="downloadQrImg" src="" alt="QR Code للتحميل من الهاتف" class="qr-image">
+            <span class="qr-label">امسح الكود بكاميرا هاتفك للتحميل الفوري</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-tag">استفسارات شائعة</span>
+        <h2 class="section-title">الأسئلة الأكثر تكراراً</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>هل يحتاج تطبيق "شرجيني" إلى اتصال بالإنترنت؟</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p><strong>لا، نهائياً!</strong> تم بناء التطبيق ليكون أوفلاين بنسبة 100%. جميع ملفات التعرف الضوئي على الحروف والأرقام (OCR) وقارئ الباركود (QR) مدمجة بالكامل ومحفوظة على ذاكرة الهاتف داخل الـ APK، ليعمل معك في أي مكان حتى لو كنت في منطقة لا يوجد بها إنترنت إطلاقاً.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>كيف يمكنني تثبيت التطبيق بصيغة APK على هاتف أندرويد؟</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>خطوات التثبيت بسيطة للغاية:</p>
+            <ol>
+              <li>اضغط على زر <strong>"تحميل التطبيق مجاناً (APK)"</strong>.</li>
+              <li>بعد اكتمال التنزيل، افتح الملف المُنزّل.</li>
+              <li>إذا ظهرت لك رسالة أمان النظام، اضغط "الإعدادات" ثم فعّل خيار <strong>"السماح بتثبيت التطبيقات من هذا المصدر"</strong>.</li>
+              <li>اضغط على <strong>"تثبيت" (Installer)</strong> وسيفتح التطبيق فوراً.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>هل التطبيق مجاني؟</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>نعم، التطبيق مجاني بالكامل ولا يطلب أي اشتراك أو رسوم إضافية، وهو مهدى لكافة مستخدمي الهواتف في تونس.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>كيف أغير رابط التحميل إذا أردت رفعه على Google Drive أو موقع آخر؟</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p>بإمكانك الضغط على زر <strong>"تخصيص مكان التحميل ⚙️"</strong> في أعلى الموقع أو أسفله، ولصق الرابط الجديد مباشرة وحفظه، وسيتحول زر التحميل في الموقع فورياً إلى الرابط الجديد الذي وضعته.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>هل هذا الموقع يظل شغالاً 24 ساعة دون أن يطفي؟</span>
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            <p><strong>نعم 24 ساعة / 7 أيام دون توقف!</strong> الموقع منشور على شبكة GitHub Pages العالمية السحابية (Edge CDN)، وهي خوادم عالمية لا تنام ولا تدخل في وضع الخمول (Sleep Mode) أبداً، وتتحمل آلاف الزوار مجاناً على مدار الساعة وبسرعة فائقة.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">شرجيني | Charejni</div>
+        <p class="footer-sub">تطبيق الهاتف التونسي لتعبئة الصولد الفوري بالكاميرا • تصميم مستوحى من سيدي بوسعيد 🇹🇳</p>
+      </div>
+
+      <div class="footer-status">
+        <span class="status-indicator-live"></span>
+        <span>الخوادم تعمل 24/7 دون انقطاع • Uptime 100%</span>
+      </div>
+
+      <div class="footer-links">
+        <button id="btnOpenLinkModalFooter" class="footer-btn-link">⚙️ إعدادات مكان التحميل</button>
+        <a href="#download" class="footer-btn-link">تحميل APK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 تطبيق شرجيني. جميع الحقوق محفوظة لتونس 🇹🇳</p>
+    </div>
+  </footer>
+
+  <!-- Link Customization Modal (تخصيص مكان التحميل) -->
+  <div id="linkModal" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-row">
+          <div class="modal-icon">⚙️</div>
+          <div>
+            <h3 class="modal-title">تخصيص مكان تحميل التطبيق</h3>
+            <p class="modal-subtitle">يمكنك وضع رابط التحميل الخاص بك (Google Drive, MediaFire, Mega, Telegram أو رابط مباشر)</p>
+          </div>
+        </div>
+        <button id="btnCloseModal" class="modal-close-btn" aria-label="إغلاق">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="customUrlInput">رابط التحميل الجديد (Download URL):</label>
+          <input type="url" id="customUrlInput" class="input-field" placeholder="https://drive.google.com/file/... أو https://mediafire.com/...">
+          <span class="input-hint">إذا تركت الرابط فارغاً، سيتم التحميل المباشر لملف <code>charjini.apk</code> المرفق مع الموقع.</span>
+        </div>
+
+        <div class="current-link-status">
+          <span class="status-title">الرابط الحالي النشط في الموقع:</span>
+          <div id="activeLinkDisplay" class="active-link-box">charjini.apk (الافتراضي المباشر)</div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnResetLink" class="btn-modal-secondary">استعادة الافتراضي</button>
+        <button id="btnTestLink" class="btn-modal-outline">تجربة الرابط ↗</button>
+        <button id="btnSaveLink" class="btn-modal-primary">حفظ وتطبيق فوراً ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast hidden"></div>
+
+  <!-- Scripts -->
+  <script src="config.js?v=1.0"></script>
+  <script src="app.js?v=1.0"></script>
+</body>
+</html>
