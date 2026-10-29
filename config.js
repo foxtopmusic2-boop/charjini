@@ -13,7 +13,7 @@ window.CHARJINI_CONFIG = {
   fileSize: "11.3 ميجابايت",
   
   // رابط تحميل التطبيق الافتراضي (يمكنك استبداله برابط Google Drive أو MediaFire أو أي رابط خارجي)
-  downloadUrl: "charjini.apk",
+  downloadUrl: "https://github.com/foxtopmusic2-boop/charjini/releases/download/v2.0/charjini.apk",
   
   // اسم ملف التحميل عند التنزيل المباشر
   downloadFileName: "charjini.apk",
