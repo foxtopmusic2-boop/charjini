@@ -1,6 +1,6 @@
 /**
  * إعدادات موقع تطبيق شرجيني (Charejni Configuration)
- * يمكنك تغيير رابط التحميل هنا في أي وقت بسهولة
+ * يحتوي على رابط التحميل ورمز مرور المدير السري
  */
 window.CHARJINI_CONFIG = {
   // اسم التطبيق
@@ -12,18 +12,18 @@ window.CHARJINI_CONFIG = {
   // حجم الملف
   fileSize: "11.3 ميجابايت",
   
-  // رابط تحميل التطبيق الافتراضي (يمكنك استبداله برابط Google Drive أو MediaFire أو أي رابط خارجي)
+  // رابط تحميل التطبيق الرسمي المباشر
   downloadUrl: "https://github.com/foxtopmusic2-boop/charjini/releases/download/v2.0/charjini.apk",
   
-  // اسم ملف التحميل عند التنزيل المباشر
+  // اسم ملف التحميل
   downloadFileName: "charjini.apk",
 
+  // رمز المرور السري للمدير فقط لتخصيص الرابط (يمكنك تغييره هنا أو من الموقع)
+  adminPin: "charjini2026",
+
+  // رابط التعديل المباشر على ملف الإعدادات في GitHub
+  githubEditUrl: "https://github.com/foxtopmusic2-boop/charjini/edit/main/config.js",
+
   // رسالة الترحيب
-  slogan: "التطبيق التونسي الأول لتعبئة رصيد الهاتف فورياً بالكاميرا وبدون إنترنت",
-  
-  // روابط التواصل أو الدعم الفني
-  contact: {
-    country: "تونس 🇹🇳",
-    supportEmail: "contact@charjini.tn"
-  }
+  slogan: "التطبيق التونسي الأول لتعبئة رصيد الهاتف فورياً بالكاميرا وبدون إنترنت"
 };
