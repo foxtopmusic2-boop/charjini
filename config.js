@@ -10,7 +10,7 @@ window.CHARJINI_CONFIG = {
   appVersion: "v2.0 الرسمية",
   
   // حجم الملف
-  fileSize: "11.3 ميجابايت",
+  fileSize: "63.5 ميجابايت",
   
   // رابط تحميل التطبيق الرسمي المباشر
   downloadUrl: "https://github.com/foxtopmusic2-boop/charjini/releases/download/v2.0/charjini.apk",
