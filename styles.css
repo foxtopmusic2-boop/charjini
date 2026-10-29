@@ -1717,3 +1717,16 @@ body.is-admin .public-only {
   background: #0284C7;
   color: #fff;
 }
+
+
+.site-brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+.brand-badge-logo {
+  padding: 0 !important;
+  overflow: hidden;
+}
