@@ -19,12 +19,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=2.0">
 </head>
 <body>
 
   <!-- Background Ambience Layer -->
   <div class="site-bg-overlay" aria-hidden="true"></div>
+
+  <!-- Admin Sticky Topbar (Only visible to the OWNER after login) -->
+  <div id="adminTopBar" class="admin-topbar hidden">
+    <div class="container admin-bar-content">
+      <div class="admin-badge">
+        <span class="admin-icon">👑</span>
+        <span>وضع المدير النشط (Admin Mode) - خاص بك وحدك</span>
+      </div>
+      <div class="admin-bar-actions">
+        <button id="btnOpenLinkModalAdmin" class="btn-admin-pill" title="تخصيص رابط التحميل">
+          ⚙️ تخصيص رابط التحميل
+        </button>
+        <button id="btnChangePasswordAdmin" class="btn-admin-pill-alt" title="تغيير رمز مرور المدير">
+          🔑 تغيير رمز المرور
+        </button>
+        <button id="btnLogoutAdmin" class="btn-admin-pill-danger" title="تسجيل الخروج">
+          🚪 خروج
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Sticky Navbar -->
   <header class="navbar">
@@ -51,13 +72,13 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Button to customize download link -->
-        <button id="btnOpenLinkModalNav" class="btn-secondary-sm" title="تخصيص مكان تحميل التطبيق">
+        <!-- Admin-Only Button: Hidden from normal visitors -->
+        <button id="btnOpenLinkModalNav" class="btn-secondary-sm admin-only" title="تخصيص مكان تحميل التطبيق">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="3"/>
             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
           </svg>
-          <span>تخصيص الرابط</span>
+          <span>تخصيص الرابط ⚙️</span>
         </button>
 
         <a href="#download" class="btn-primary-sm download-cta-btn">
@@ -105,12 +126,22 @@
             </div>
           </a>
 
-          <button id="btnOpenLinkModalHero" class="btn-hero-secondary" title="اضغط هنا لتحديد الرابط الذي تريده">
+          <!-- Public secondary action for visitors -->
+          <a href="#how-it-works" class="btn-hero-secondary public-only">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="10 8 16 12 10 16 10 8"/>
+            </svg>
+            <span>شاهد كيف يعمل</span>
+          </a>
+
+          <!-- Admin-Only Button: Hidden from normal visitors -->
+          <button id="btnOpenLinkModalHero" class="btn-hero-secondary admin-only" title="تخصيص رابط التحميل">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
             </svg>
-            <span>مكان التحميل (خصص الرابط)</span>
+            <span>مكان التحميل (خصص الرابط) ⚙️</span>
           </button>
         </div>
 
@@ -412,8 +443,8 @@
               <span>تحميل ملف الـ APK (11.3 MB)</span>
             </a>
 
-            <!-- Customize Link Action -->
-            <button id="btnOpenLinkModalBanner" class="btn-download-config">
+            <!-- Admin-Only Button: Hidden from normal visitors -->
+            <button id="btnOpenLinkModalBanner" class="btn-download-config admin-only" title="تخصيص رابط التحميل">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
@@ -431,7 +462,6 @@
 
         <div class="download-qr-box">
           <div class="qr-container">
-            <!-- QR code generated automatically by script -->
             <img id="downloadQrImg" src="" alt="QR Code للتحميل من الهاتف" class="qr-image">
             <span class="qr-label">امسح الكود بكاميرا هاتفك للتحميل الفوري</span>
           </div>
@@ -487,16 +517,6 @@
 
         <details class="faq-item">
           <summary class="faq-question">
-            <span>كيف أغير رابط التحميل إذا أردت رفعه على Google Drive أو موقع آخر؟</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p>بإمكانك الضغط على زر <strong>"تخصيص مكان التحميل ⚙️"</strong> في أعلى الموقع أو أسفله، ولصق الرابط الجديد مباشرة وحفظه، وسيتحول زر التحميل في الموقع فورياً إلى الرابط الجديد الذي وضعته.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
             <span>هل هذا الموقع يظل شغالاً 24 ساعة دون أن يطفي؟</span>
             <span class="faq-icon">+</span>
           </summary>
@@ -522,8 +542,15 @@
       </div>
 
       <div class="footer-links">
-        <button id="btnOpenLinkModalFooter" class="footer-btn-link">⚙️ إعدادات مكان التحميل</button>
         <a href="#download" class="footer-btn-link">تحميل APK</a>
+        <!-- Secret discrete Admin Lock button for owner -->
+        <button id="btnFooterAdminLock" class="admin-lock-btn" title="دخول المدير (Admin Login)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span class="admin-lock-text">دخول المدير</span>
+        </button>
       </div>
     </div>
     <div class="footer-bottom">
@@ -531,15 +558,44 @@
     </div>
   </footer>
 
-  <!-- Link Customization Modal (تخصيص مكان التحميل) -->
+  <!-- Admin Login Modal (طلب رمز المرور السري للمدير) -->
+  <div id="adminLoginModal" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <div class="modal-title-row">
+          <div class="modal-icon">🔒</div>
+          <div>
+            <h3 class="modal-title">تسجيل دخول المدير</h3>
+            <p class="modal-subtitle">خاص بصاحب الموقع فقط لتخصيص الروابط والإعدادات</p>
+          </div>
+        </div>
+        <button id="btnCloseLoginModal" class="modal-close-btn" aria-label="إغلاق">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="adminPinInput">رمز المرور السري (Admin PIN):</label>
+          <input type="password" id="adminPinInput" class="input-field" placeholder="أدخل رمز المرور..." autofocus>
+          <span id="loginErrorMsg" class="input-error-msg hidden">⚠️ رمز المرور غير صحيح! يرجى المحاولة مجدداً.</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnCancelLogin" class="btn-modal-secondary">إلغاء</button>
+        <button id="btnSubmitLogin" class="btn-modal-primary">دخول المدير ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link Customization Modal (تخصيص مكان التحميل - خاص بالمدير) -->
   <div id="linkModal" class="modal-backdrop hidden" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-header">
         <div class="modal-title-row">
-          <div class="modal-icon">⚙️</div>
+          <div class="modal-icon">👑</div>
           <div>
-            <h3 class="modal-title">تخصيص مكان تحميل التطبيق</h3>
-            <p class="modal-subtitle">يمكنك وضع رابط التحميل الخاص بك (Google Drive, MediaFire, Mega, Telegram أو رابط مباشر)</p>
+            <h3 class="modal-title">لوحة تحكم المدير: تخصيص مكان التحميل</h3>
+            <p class="modal-subtitle">أنت مسجل كمدير. يمكنك وضع رابط التحميل الجديد وحفظه فورياً.</p>
           </div>
         </div>
         <button id="btnCloseModal" class="modal-close-btn" aria-label="إغلاق">&times;</button>
@@ -549,12 +605,20 @@
         <div class="form-group">
           <label for="customUrlInput">رابط التحميل الجديد (Download URL):</label>
           <input type="url" id="customUrlInput" class="input-field" placeholder="https://drive.google.com/file/... أو https://mediafire.com/...">
-          <span class="input-hint">إذا تركت الرابط فارغاً، سيتم التحميل المباشر لملف <code>charjini.apk</code> المرفق مع الموقع.</span>
+          <span class="input-hint">ضع رابطك المباشر أو رابط Google Drive / MediaFire / Telegram.</span>
         </div>
 
         <div class="current-link-status">
           <span class="status-title">الرابط الحالي النشط في الموقع:</span>
-          <div id="activeLinkDisplay" class="active-link-box">charjini.apk (الافتراضي المباشر)</div>
+          <div id="activeLinkDisplay" class="active-link-box">charjini.apk</div>
+        </div>
+
+        <div class="admin-help-box">
+          <span class="help-title">💡 لتثبيت الرابط نهائياً لكل زوار العالم عبر GitHub:</span>
+          <p class="help-desc">يمكنك فتح ملف الإعدادات بضغطة زر وتعديل الرابط مباشرة في مستودعك ليتحدث الموقع عالمياً:</p>
+          <a id="btnOpenGitHubEdit" href="https://github.com/foxtopmusic2-boop/charjini/edit/main/config.js" target="_blank" class="btn-github-edit">
+            تعديل في ملف GitHub الرسمي ↗
+          </a>
         </div>
       </div>
 
@@ -566,11 +630,39 @@
     </div>
   </div>
 
+  <!-- Change PIN Modal -->
+  <div id="changePinModal" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <div class="modal-title-row">
+          <div class="modal-icon">🔑</div>
+          <div>
+            <h3 class="modal-title">تغيير رمز مرور المدير</h3>
+            <p class="modal-subtitle">اختر رمز مرور سري جديد خاص بك</p>
+          </div>
+        </div>
+        <button id="btnClosePinModal" class="modal-close-btn" aria-label="إغلاق">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newPinInput">الرمز الجديد:</label>
+          <input type="password" id="newPinInput" class="input-field" placeholder="اكتب رمز المرور الجديد...">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btnCancelPinChange" class="btn-modal-secondary">إلغاء</button>
+        <button id="btnSaveNewPin" class="btn-modal-primary">حفظ الرمز الجديد ✓</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification -->
   <div id="toastNotification" class="toast hidden"></div>
 
   <!-- Scripts -->
-  <script src="config.js?v=1.0"></script>
-  <script src="app.js?v=1.0"></script>
+  <script src="config.js?v=2.0"></script>
+  <script src="app.js?v=2.0"></script>
 </body>
 </html>
